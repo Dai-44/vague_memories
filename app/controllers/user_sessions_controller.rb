@@ -11,4 +11,9 @@ class UserSessionsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    logout
+    redirect_to root_path, success: "ログアウトに成功しました"
+  end
 end
