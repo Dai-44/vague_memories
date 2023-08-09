@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :find_post, only: %i[edit update destroy] 
+
   def index
     @posts = Post.all.includes(:user).order(created_at: :desc)
   end
@@ -23,16 +25,28 @@ class PostsController < ApplicationController
     end
   end
 
-  def edit 
-  end
+  def edit ;end
 
   def update
-    
+    if @post.update(post_params)
+      redirect_to post_path(@post), success: (t 'defaults.message.updated', item: Post.model_name.human)
+    else
+      flash.now[:danger] = t 'defaults.message.not_updated', item: Post.model_name.human
+      render :edit
+    end
+  end
+
+  def destroy
+
   end
 
   private
 
   def post_params
     params.require(:post).permit(:body)
+  end
+
+  def find_post
+    @post = current_user.posts.find(params[:id])
   end
 end
