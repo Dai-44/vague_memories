@@ -7,9 +7,26 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def show
+  def create
+    @post = current_user.posts.build(post_params)
+    if @post.save
+      redirect_to posts_path, success: (t 'defaults.message.created', item: Post.model_name.human)
+    else
+      flash.now[:danger] = (t 'defaults.message.not_created', item: Post.model_name.human)
+      render :new
+    end
   end
 
   def edit 
+  end
+
+  def update
+    
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:body)
   end
 end
