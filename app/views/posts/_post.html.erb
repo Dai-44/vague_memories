@@ -8,10 +8,7 @@
   <td>
     <%= l post.created_at, format: :long %>
   </td>
-  <td>
-    <% if current_user.own?(post) %>  
-      <%= link_to t('defaults.edit'), edit_post_path(post), class: 'btn btn-success' %>
-      <%= link_to t('defaults.delete'), post_path(post), method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: 'btn btn-danger' %>
-    <% end %>
+  <td>  
+    <%= render 'crud_menus', post: post if current_user.own?(post) %>
   </td>
 </tr>
