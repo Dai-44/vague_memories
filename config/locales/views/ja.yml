@@ -5,6 +5,8 @@ ja:
     logout: 'ログアウト'
     post: '投稿'
     create: '作成'
+    edit: '編集'
+    delete: '削除'
     message:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました"
@@ -38,4 +40,6 @@ ja:
       title: '投稿詳細'
     new:
       title: '投稿作成'
+    edit:
+      title: '投稿編集'
     
