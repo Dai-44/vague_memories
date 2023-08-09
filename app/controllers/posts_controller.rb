@@ -37,7 +37,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
+    @post.destroy!
+    redirect_to posts_path, success: (t 'defaults.message.deleted', item: Post.model_name.human )
   end
 
   private
