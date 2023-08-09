@@ -1,6 +1,6 @@
 <tr>
   <td>
-    <%= post.body %>
+    <%= link_to post.body, post_path(post), class: 'text-body' %>
   </td>
   <td>
     <%= post.user.name %>
