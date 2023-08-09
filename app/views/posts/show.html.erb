@@ -1,13 +1,13 @@
 <div class="container pt-5">
   <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
+    <div class="col-lg-6 offset-lg-3">
       <h1><%= t('.title') %></h1>
       <!-- 掲示板内容 -->
       <article class="card">
         <div class="card-body">
           <div class='row'>
-            <div class='col-md-9'>
-              <p><%= simple_format(@post.body) %></p>
+            <div class='col-md-12'>
+              <h5><%= simple_format(@post.body) %></h5>
               <%#= render 'crud_menus', board: @board if current_user.own?(@board) %>
               <ul class="list-inline">
                 <li class="list-inline-item"><%= "posted by #{@post.user.name}" %></li>
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <%#= render 'comments/form', {board: @board, comment: @comment} %>
+  <%= render 'comments/form', {post: @post, comment: @comment} %>
 
-  <%#= render 'comments/comments', {comments: @comments} %>
+  <%= render 'comments/comments', {comments: @comments} %>
 </div>

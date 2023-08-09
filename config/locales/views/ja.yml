@@ -3,6 +3,7 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    post: '投稿'
     create: '作成'
     message:
       require_login: 'ログインしてください'
