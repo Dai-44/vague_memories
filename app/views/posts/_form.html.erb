@@ -1,0 +1,8 @@
+<%= form_with model: post, local: true do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: "form-control", rows: "5" %>
+  </div>
+  <%= f.submit (t 'defaults.create'), class: "btn btn-primary" %>
+<% end %>
