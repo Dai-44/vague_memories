@@ -1,6 +1,6 @@
 <tr>
   <td>
-    <%= link_to post.body, post_path(post), class: 'text-body' %>
+    <%= link_to post.body, post_path(post), class: 'text-body fuzzy-text', data:{ random_index: "0" } %>
   </td>
   <td>
     <%= post.user.name %>

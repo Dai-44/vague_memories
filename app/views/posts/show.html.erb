@@ -3,12 +3,24 @@
   <div class="row mb-3">
     <div class="col-lg-6 offset-lg-3">
       <h1><%= t('.title') %></h1>
+      <div class="row">
+        <div class="col-md-12"> 
+          <div class="row d-flex justify-content-end mb-3">
+            <div class="col-md-3">
+              <%= link_to "一覧へ", posts_path, class: "btn btn-success" %>
+            </div>
+            <div class="col-md-3">
+              <%= button_tag "リロード", class: "btn btn-danger", onclick: "window.location.reload();" %>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- 掲示板内容 -->
       <article class="card">
         <div class="card-body">
           <div class='row'>
             <div class='col-md-12'>
-              <h5><%= simple_format(@post.body) %></h5>
+              <h5><%= simple_format(@post.body, class: 'fuzzy-text') %></h5>
               <%= render 'crud_menus', post: @post if current_user.own?(@post) %>
               <ul class="list-inline">
                 <li class="list-inline-item"><%= "posted by #{@post.user.name}" %></li>
