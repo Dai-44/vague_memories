@@ -34,12 +34,12 @@ ja:
       success: 'ログアウトしました'
   posts:
     index:
-      title: '投稿一覧'
-      no_result: '投稿がありません'
+      title: '思い出一覧'
+      no_result: '思い出がありません'
     show: 
-      title: '投稿詳細'
+      title: '思い出詳細'
     new:
-      title: '投稿作成'
+      title: '思い出作成'
     edit:
-      title: '投稿編集'
+      title: '思い出編集'
     
