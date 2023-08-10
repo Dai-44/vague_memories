@@ -8,7 +8,7 @@
         <div class="card-body">
           <div class='row'>
             <div class='col-md-12'>
-              <h5><%= simple_format(@post.body) %></h5>
+              <h5><%= simple_format(@post.body, class: 'fuzzy-text') %></h5>
               <%= render 'crud_menus', post: @post if current_user.own?(@post) %>
               <ul class="list-inline">
                 <li class="list-inline-item"><%= "posted by #{@post.user.name}" %></li>
