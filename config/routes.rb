@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     get 'bookmark', on: :collection
     resources :comments, only: %i[create destroy], shallow: true
   end
+  resources :bookmark, only: %i[create destroy]
 
 end
