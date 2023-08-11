@@ -41,8 +41,8 @@ class PostsController < ApplicationController
     redirect_to posts_path, success: (t 'defaults.message.deleted', item: Post.model_name.human )
   end
 
-  def bookmark
-    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+  def bookmarks
+    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc).page(params[:page]).per(10)
   end
   private
 

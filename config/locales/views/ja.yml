@@ -42,4 +42,7 @@ ja:
       title: '思い出作成'
     edit:
       title: '思い出編集'
+    bookmarks:
+      title: 'ブックマーク一覧'
+      no_result: 'ブックマークがありません'
     
