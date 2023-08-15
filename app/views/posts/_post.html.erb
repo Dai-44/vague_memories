@@ -9,6 +9,10 @@
     <%= l post.created_at, format: :long %>
   </td>
   <td>  
-    <%= render 'crud_menus', post: post if current_user.own?(post) %>
+    <% if current_user.own?(post) %>
+      <%= render 'crud_menus', post: post %>
+    <% else %>
+      <%= render 'bookmark_button', post: post %>
+    <% end %>
   </td>
 </tr>

@@ -23,7 +23,7 @@ function createModifiedText(text) {
   var modifiedText = '';
   for (var i = 0; i < text.length; i++) {
     var random = Math.random();
-    if (random < 0.6) { // 50%の確率で非表示にする
+    if (random < 0.5) { // 50%の確率で非表示にする
       modifiedText += ' ';
     } else {
       modifiedText += text[i];

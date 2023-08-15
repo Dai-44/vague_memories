@@ -3,18 +3,18 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
-    post: '投稿'
+    post: '思い出'
     create: '作成'
     edit: '編集'
     delete: '削除'
     message:
       require_login: 'ログインしてください'
-      created: "%{item}を作成しました"
+      created: "%{item}を投稿しました"
       not_created: "%{item}を作成できませんでした"
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
       deleted: "%{item}を削除しました"
-      delete_confirm: '削除しますか？'
+      delete_confirm: '思い出を抹消しますか？'
   users:
     new:
       title: 'ユーザー登録'
@@ -42,4 +42,7 @@ ja:
       title: '思い出作成'
     edit:
       title: '思い出編集'
+    bookmarks:
+      title: 'ブックマーク一覧'
+      no_result: 'ブックマークがありません'
     
