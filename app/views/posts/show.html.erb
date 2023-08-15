@@ -25,6 +25,11 @@
               <ul class="list-inline">
                 <li class="list-inline-item"><%= "posted by #{@post.user.name}" %></li>
                 <li class="list-inline-item"><%= l @post.created_at, format: :long %></li>
+                <li class="list-inline-item float-right">
+                  <%= link_to "https://twitter.com/share?url=#{ request.url }&text= #{@post.body}", target: '_blank' do %>
+                    <i class="fab fa-twitter" style='color: #3399FF;'></i>
+                  <% end %>
+                </li>
               </ul>
             </div>
           </div>
