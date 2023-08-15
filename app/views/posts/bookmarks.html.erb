@@ -7,8 +7,8 @@
         <div class="col-md-2">
           <%= link_to "一覧へ", posts_path, class: "btn btn-success" %>
         </div>
-        <div class="col-md-2">
-          <%= button_tag "補正を外す", class: "btn btn-danger", onclick: "window.location.reload();" %>
+        <div class="col-md-3">
+          <%= button_tag "思い出フィルターを外す", class: "btn btn-danger", onclick: "window.location.reload();" %>
         </div>
       </div>
     </div>
@@ -18,11 +18,10 @@
       <table class="table table-striped">
         <thead>
         <tr>
-          <th scope="col"><%= Post.human_attribute_name(:body) %></th>
-          <th scope="col"><%= Post.human_attribute_name(:user) %></th>
-          <th scope="col"><%= Post.human_attribute_name(:created_at) %></th>
-          <th scope="col"></th>
-        </tr>
+          <th scope="col", style="width: 60%"><%= Post.human_attribute_name(:body) %></th>
+          <th scope="col", style="width: 15%"><%= Post.human_attribute_name(:user) %></th>
+          <th scope="col", style="width: 10%"><%= Post.human_attribute_name(:created_at) %></th>
+          <th scope="col", style="width: 15%"></th>
         </thead>
         <tbody>
         <% if @bookmark_posts.present? %>
