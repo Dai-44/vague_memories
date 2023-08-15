@@ -1,6 +1,9 @@
 <div class='top-wrapper'>
   <div class='top-inner-text'>
-    <h1>TOP PAGE</h1>
+    <h1>Vague Memories</h1>
     <p>トップページです。コレから更新します。</p>
+    <%= link_to "さっそく思い出を投稿する", guest_login_path, method: :post, class: "btn btn-success" %>
+    <%= link_to "新規登録", new_user_path, class: "btn btn-primary" %>
+    <%= link_to "ログイン", login_path, class: "btn btn-secondary" %>
   </div>
 </div>
